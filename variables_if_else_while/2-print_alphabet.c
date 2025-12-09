@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in uppercase using putchar
+ * main - Prints the alphabet in lowercase using putchar
  *
  * Return: Always 0 (Success)
  */
@@ -9,7 +9,8 @@ int main(void)
 {
 	char ch;
 
-	for (ch = 'A'; ch <= 'Z'; ch++)
+	/* Loop from 'a' to 'z' */
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
 	}

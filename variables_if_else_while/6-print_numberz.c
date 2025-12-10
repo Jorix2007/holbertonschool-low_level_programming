@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - Prints single digit numbers of base 10 using putchar
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
     int num;

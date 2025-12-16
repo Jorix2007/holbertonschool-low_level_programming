@@ -2,7 +2,7 @@
 
 void print_alphabet_x10(void)
 {
-    char letter
+    char letter;
 
     letter = 'a';
     for (i = 0, 10, i++)

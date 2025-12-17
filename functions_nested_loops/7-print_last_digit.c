@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-int numberArray[]
+int numberArray[];
 int print_last_digit(int)
 {
     for(numberArray[i]; i = 0; -1)

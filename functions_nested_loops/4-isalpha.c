@@ -11,5 +11,5 @@ int _isalpha(int c)
     else if (c > 'A' && c < 'Z')
         _putchar(1 + '0');
     else
-        _putchar('0');
+        return(0);
 }

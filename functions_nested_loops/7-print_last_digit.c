@@ -1,12 +1,23 @@
 #include "main.h"
 
-
-int numberArray[];
-int print_last_digit(int)
+/**
+ * print_last_digit - Prints the last digit of a number
+ * @n: The number to check
+ *
+ * Return: The value of the last digit
+ */
+int print_last_digit(int n)
 {
-    for(numberArray[i]; i = 0; -1)
-    {
-        _putchar(i)
-    }
-    _putchar("\n")
+	int last;
+
+	last = n % 10;
+
+	if (last < 0)
+	{
+		last = last * -1;
+	}
+
+	_putchar(last + '0');
+
+	return (last);
 }

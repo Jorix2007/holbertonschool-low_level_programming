@@ -8,30 +8,29 @@
  */
 char *cap_string(char *s)
 {
-    int i;
-    int j; /* Вынесли j сюда */
-    int capitalize_next = 1;
-    char separators[] = " \t\n,;.!?\"(){}";
+	int i;
+	int j;
+	int cap = 1;
+	char sep[] = " \t\n,;.!?\"(){}";
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        /* Если флаг поднят И это маленькая буква -> меняем */
-        if (capitalize_next && s[i] >= 'a' && s[i] <= 'z')
-        {
-            s[i] = s[i] - ('a' - 'A');
-        }
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (cap && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32; /* 32 - это разница между 'a' и 'A' */
+		}
 
-        capitalize_next = 0;
+		cap = 0;
 
-        /* Используем j, который объявили наверху */
-        for (j = 0; separators[j] != '\0'; j++)
-        {
-            if (s[i] == separators[j])
-            {
-                capitalize_next = 1;
-                break;
-            }
-        }
-    }
-    return (s);
+		for (j = 0; sep[j] != '\0'; j++)
+		{
+			if (s[i] == sep[j])
+			{
+				cap = 1;
+				break;
+			}
+		}
+	}
+
+	return (s);
 }

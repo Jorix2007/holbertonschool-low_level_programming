@@ -9,16 +9,22 @@
 char *cap_string(char *s)
 {
     int i;
+    int j; /* Вынесли j сюда */
     int capitalize_next = 1;
     char separators[] = " \t\n,;.!?\"(){}";
+
     for (i = 0; s[i] != '\0'; i++)
     {
+        /* Если флаг поднят И это маленькая буква -> меняем */
         if (capitalize_next && s[i] >= 'a' && s[i] <= 'z')
         {
             s[i] = s[i] - ('a' - 'A');
         }
+
         capitalize_next = 0;
-        for (int j = 0; separators[j] != '\0'; j++)
+
+        /* Используем j, который объявили наверху */
+        for (j = 0; separators[j] != '\0'; j++)
         {
             if (s[i] == separators[j])
             {
@@ -27,5 +33,5 @@ char *cap_string(char *s)
             }
         }
     }
-    return s;
+    return (s);
 }

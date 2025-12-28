@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * leet - encodes a string into 1337
@@ -9,24 +8,23 @@
  */
 char *leet(char *s)
 {
-    int i, j;
-    char subs[] = "aAeEoOtTlL";
-    char repl[] = "4433007711";
+	int i, j;
+	char subs[] = "aAeEoOtTlL";
+	char repl[] = "4433007711";
 
-    if (s == NULL)
-        return (s);
+	/* Iterate through the string */
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		/* Iterate through the mapping arrays */
+		for (j = 0; j < 10; j++)
+		{
+			/* The ONLY allowed IF statement */
+			if (s[i] == subs[j])
+			{
+				s[i] = repl[j];
+			}
+		}
+	}
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        for (j = 0; j < 10; j++)
-        {
-            if (s[i] == subs[j])
-            {
-                s[i] = repl[j];
-                break; 
-            }
-        }
-    }
-
-    return (s);
+	return (s);
 }

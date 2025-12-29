@@ -3,16 +3,13 @@
 /**
  * print_line - Prints a straight line using the character '_'
  * @n: The number of times to print the character '_'
- *
- * Return: void
  */
 void print_line(int n)
 {
-    int i;
+	int i;
 
-    for (i = 0; i < n; i++)
-    {
-        _putchar('_');
-    }
-    _putchar('\n');
+	for (i = 0; i < n; i++)
+		_putchar('_');
+
+	_putchar('\n');
 }

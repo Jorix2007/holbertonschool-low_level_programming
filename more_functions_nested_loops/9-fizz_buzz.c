@@ -3,19 +3,17 @@
 void FizzBuzz(void)
 {
     int i, j;
-    int fizz = 'Fizz';
-    int buzz = 'Buzz';
     for(i = 0; i <= 100; i++)
     {
         for(; j <= i; j++)
         {
             if((i % j) == 3)
             {
-                printf(fizz);
+                printf('Fizz');
             }
             else if((i % j) == 5)
             {
-                printf(buzz);
+                printf('Buzz');
             }
             else if(((i % j) == 3) && ((i % j) == 5))
             {

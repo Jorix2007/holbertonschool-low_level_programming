@@ -3,23 +3,23 @@
 void FizzBuzz(void)
 {
     int i;
-    for(i = 0; i <= 100; i++)
-    {
-        if(((i % 3) == 0) && ((i % 5) == 0))
+    for (i = 1; i <= 100; i++)
         {
-            printf("Fizz");
+        if (((i % 3) == 0) && ((i % 5) == 0))
+        {
+            printf("FizzBuzz ");
         }
-        else if((i % 5) == 0)
+        else if ((i % 3) == 0)
         {
-            printf("Buzz");
+            printf("Fizz ");
         }
-        else if((i % 3) == 0)
+        else if ((i % 5) == 0)
         {
-            printf("FizzBuzz");
+            printf("Buzz ");
         }
         else
         {
-            printf("%d", i);
+            printf("%d ", i);
         }
     }
 }

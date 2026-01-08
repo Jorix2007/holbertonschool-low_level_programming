@@ -7,6 +7,6 @@ int main(int argc, char *argv[])
     {
         printf("Rguments: %s\n", argv[i]);
     }
-    printf('\n')
+    printf("\n");
     return(0);
 }

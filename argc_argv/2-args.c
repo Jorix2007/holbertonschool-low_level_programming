@@ -7,4 +7,5 @@ int main(int argc, char *argv[])
     {
         printf("Rguments: %s", argv[i]);
     }
+    return(0)
 }

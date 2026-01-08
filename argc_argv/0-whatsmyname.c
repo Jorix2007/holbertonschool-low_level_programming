@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints the name of the program followed by a new line
- * @argc: the number of arguments (unused)
- * @argv: the array of arguments
+ * main - prints the name of the program
+ * @argc: number of arguments (unused)
+ * @argv: array of arguments
  *
  * Return: Always 0 (Success)
  */
@@ -11,6 +11,6 @@ int main(int argc, char *argv[])
 {
 	(void)argc;
 
-	printf("the name of the program is %s\n", argv[0]);
+	printf("%s\n", argv[0]);
 	return (0);
 }

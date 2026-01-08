@@ -6,19 +6,29 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Success), or 1 (Error)
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, sum = 0;
 
-	/* Loop starts at 1 to skip the program name */
+	/* Loop through each argument starting from index 1 */
 	for (i = 1; i < argc; i++)
 	{
+		/* Loop through each character of the current argument string */
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			/* Check if the character is NOT a digit */
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		/* If all characters were digits, add to sum */
 		sum += atoi(argv[i]);
 	}
 
 	printf("%d\n", sum);
-
 	return (0);
 }

@@ -1,1 +1,3 @@
 Readme file for structures...
+
+the third task was just adding the name dog_t.

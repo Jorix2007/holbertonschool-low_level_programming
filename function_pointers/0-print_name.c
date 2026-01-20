@@ -3,10 +3,10 @@
 
 /**
  * print_name - prints a name using a function pointer
- * @name: string to add
- * @f: pointer to function
+ * @name: name of the person
+ * @f: pointer to the printing function
  *
- * Return: nothing
+ * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {

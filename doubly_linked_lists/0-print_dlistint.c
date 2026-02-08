@@ -1,8 +1,4 @@
-/*
- * File: 0-print_dlistint.c
- * Auth: Jabir Hasanli
- */
-
+#include <stdio.h>
 #include "lists.h"
 
 /**
